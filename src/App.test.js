@@ -14,6 +14,16 @@ test("test second react app case", () => {
 });
 test("testing input field", () => {
   render(<App />);
-  let inputField = screen.getByRole("textbox");
-  expect(inputField).toBeInTheDocument();
+  // for textbox test
+  let checkInputField = screen.getByRole("textbox");
+  // for placeholder test
+  let checkInputPlaceHolder = screen.getByPlaceholderText("Enter user name");
+  expect(checkInputField).toBeInTheDocument();
+  expect(checkInputPlaceHolder).toBeInTheDocument();
+  // for name test
+  expect(checkInputField).toHaveAttribute("name", "name");
+  // for id test
+  expect(checkInputField).toHaveAttribute("id", "userid");
+  expect(checkInputField).toHaveAttribute("type", "text");
+  expect(checkInputField).toHaveAttribute("value", "username");
 });

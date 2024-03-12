@@ -6,7 +6,13 @@ function App() {
     <div className="App">
       <p>hellow World</p>
       <h1>First test case</h1>
-      <input type="text" placeholder="Enter user name"></input>
+      <input
+        type="text"
+        placeholder="Enter user name"
+        name="name"
+        id="userid"
+        value="username"
+      ></input>
     </div>
   );
 }
