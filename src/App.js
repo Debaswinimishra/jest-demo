@@ -1,7 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [v, setV] = useState("username");
   return (
     <div className="App">
       <p>hellow World</p>
@@ -11,7 +13,7 @@ function App() {
         placeholder="Enter user name"
         name="name"
         id="userid"
-        value="username"
+        value={v}
       ></input>
     </div>
   );

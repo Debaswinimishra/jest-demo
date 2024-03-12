@@ -27,3 +27,28 @@ test("testing input field", () => {
   expect(checkInputField).toHaveAttribute("type", "text");
   expect(checkInputField).toHaveAttribute("value", "username");
 });
+
+describe.skip("UI test case group", () => {
+  test("test case 1", () => {
+    render(<App />);
+    let checkInputField = screen.getByRole("textbox");
+    expect(checkInputField).toHaveAttribute("name", "name");
+  });
+  test("test case 2", () => {
+    render(<App />);
+    let checkInputField = screen.getByRole("textbox");
+    expect(checkInputField).toHaveAttribute("name", "name");
+  });
+});
+describe("API test case group", () => {
+  test("api test case 1", () => {
+    render(<App />);
+    let checkInputField = screen.getByRole("textbox");
+    expect(checkInputField).toHaveAttribute("name", "name");
+  });
+  test("api test case 2", () => {
+    render(<App />);
+    let checkInputField = screen.getByRole("textbox");
+    expect(checkInputField).toHaveAttribute("name", "name");
+  });
+});
