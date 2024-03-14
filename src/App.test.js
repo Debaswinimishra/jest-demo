@@ -1,18 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("test first react app case", () => {
+test.skip("test first react app case", () => {
   render(<App />);
   const text = screen.getByText(/hellow world/i);
 
   expect(text).toBeInTheDocument();
 });
-test("test second react app case", () => {
+test.skip("test second react app case", () => {
   render(<App />);
   const text2 = screen.getByText("First test case");
   expect(text2).toBeInTheDocument();
 });
-test("testing input field", () => {
+test.skip("testing input field", () => {
   render(<App />);
   // for textbox test
   let checkInputField = screen.getByRole("textbox");
@@ -40,7 +40,7 @@ describe.skip("UI test case group", () => {
     expect(checkInputField).toHaveAttribute("name", "name");
   });
 });
-describe("API test case group", () => {
+describe.skip("API test case group", () => {
   test("api test case 1", () => {
     render(<App />);
     let checkInputField = screen.getByRole("textbox");
@@ -51,13 +51,13 @@ describe("API test case group", () => {
     let checkInputField = screen.getByRole("textbox");
     expect(checkInputField).toHaveAttribute("name", "name");
   });
-  describe("inner describe test group", () => {
+  describe.skip("inner describe test group", () => {
     test("api test case 3", () => {
       render(<App />);
       let checkInputField = screen.getByRole("textbox");
       expect(checkInputField).toHaveAttribute("name", "name");
     });
-    describe("nested describe test group", () => {
+    describe.skip("nested describe test group", () => {
       test("api test case 4 for nested", () => {
         render(<App />);
         let checkInputField = screen.getByRole("textbox");

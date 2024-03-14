@@ -12,7 +12,7 @@ function Onchange() {
         name="name"
         id="userid"
         value={data}
-        onChange={(e) => setData(e.target.value)}
+        onChange={(e) => setData(e.target.value + "testabc")}
       ></input>
     </div>
   );
