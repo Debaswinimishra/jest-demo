@@ -51,4 +51,18 @@ describe("API test case group", () => {
     let checkInputField = screen.getByRole("textbox");
     expect(checkInputField).toHaveAttribute("name", "name");
   });
+  describe("inner describe test group", () => {
+    test("api test case 3", () => {
+      render(<App />);
+      let checkInputField = screen.getByRole("textbox");
+      expect(checkInputField).toHaveAttribute("name", "name");
+    });
+    describe("nested describe test group", () => {
+      test("api test case 4 for nested", () => {
+        render(<App />);
+        let checkInputField = screen.getByRole("textbox");
+        expect(checkInputField).toHaveAttribute("name", "name");
+      });
+    });
+  });
 });
