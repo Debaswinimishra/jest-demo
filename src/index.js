@@ -2,14 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from './App';
-import Onchange from "./Onchange";
+// import Onchange from "./Onchange";
+import ClickEvent from "./ClickEvent";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Onchange />
+    {/* <Onchange /> */}
+    <ClickEvent />
   </React.StrictMode>
 );
 
